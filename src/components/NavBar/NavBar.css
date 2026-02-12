@@ -8,9 +8,6 @@ hr {
 li:hover + hr {
     width:100%;
 }
-
-nav {
-    height: 0;
-    transition: 0.5s ease-in-out;
-    display:none;
+nav{
+    transition: 0.2s ease-in-out;
 }
