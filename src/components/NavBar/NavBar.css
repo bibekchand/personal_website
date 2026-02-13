@@ -1,7 +1,7 @@
 hr {
     width:0;
     height:5px;
-    background-color:white;
+    background-color:black;
     border-radius:2px;
     transition:0.5s ease-in-out;
 }
@@ -9,5 +9,7 @@ li:hover + hr {
     width:100%;
 }
 nav{
+    background-color: white;
+    color: black;
     transition: 0.2s ease-in-out;
 }
