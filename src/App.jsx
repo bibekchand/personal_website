@@ -14,15 +14,15 @@ export default function App() {
             </nav>
             <div className="grid grid-cols-2 mt-20 pl-20">
                 <div>
-                    <span className="text-6xl font-bold">Bibek Chand</span>
+                    <span className="text-6xl font-bold font-[Bungee]">Bibek Chand</span>
                     <br />
-                    <span className="text-blue-500 text-6xl font-bold">Developer</span>
-                    <div className="mt-4">
+                    <span className="text-blue-500 text-6xl font-[Bungee]">Developer</span>
+                    <div className="mt-4 font-[Saira_Stencil]">
                         Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
                         <br />
                         <button
                             type="button"
-                            className=" mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
+                            className=" font-[Bungee] mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
                         >
                             Contact Me
                         </button>
