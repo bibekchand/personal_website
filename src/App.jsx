@@ -1,35 +1,100 @@
-import NavBar from "./components/NavBar/NavBar.jsx";
-import TextType from "./components/TextType/TextType.jsx";
+import NavBar from "./components/FloatingMenu/FloatingMenu.jsx";
 export default function App() {
-	return (
-		<>
-			<NavBar />
-			<div className="h-full flex flex-col justify-center items-center text-3xl gap-5">
-				Hi, I am Bibek 👋
-				<TextType
-					text={[
-						"iOS Development",
-						"Full Stack Web Development",
-						"Android app development",
-					]}
-					typingSpeed={75}
-					pauseDuration={1500}
-					showCursor
-					cursorCharacter="_"
-					texts={[
-						"Welcome to React Bits! Good to see you!",
-						"Build some amazing experiences!",
-					]}
-					deletingSpeed={50}
-					variableSpeedEnabled={false}
-					variableSpeedMin={60}
-					variableSpeedMax={120}
-					cursorBlinkDuration={0.5}
-				/>
-			<button type="button" className="text-2xl border-amber-200 border-2 p-2 hover:bg-amber-200 duration-200 cursor-pointer hover:text-black">
-				Contact Me --&gt;
-			</button>
-			</div>
-		</>
-	);
+    return (
+        <>
+            <nav className="flex justify-between pl-20 pt-5 pr-20">
+                <div className="rounded-full overflow-clip">
+                    <img
+                        src="https://preview.redd.it/give-me-your-best-anime-profile-pictures-v0-ao0ke2r604wf1.jpg?width=447&format=pjpg&auto=webp&s=11411497bc415fef5a005bf95274cd57dd7e6abe"
+                        alt=""
+                        width={60}
+                    />
+                </div>
+                <NavBar />
+            </nav>
+            <div className="grid grid-cols-2 mt-20 pl-20">
+                <div>
+                    <span className="text-6xl font-bold">Bibek Chand</span>
+                    <br />
+                    <span className="text-blue-500 text-6xl font-bold">Developer</span>
+                    <div className="mt-4">
+                        Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
+                        <br />
+                        <button
+                            type="button"
+                            className=" mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
+                        >
+                            Contact Me
+                        </button>
+                    </div>
+                </div>
+                <div className=" justify-self-center">
+                    <img
+                        src="https://preview.redd.it/give-me-your-best-anime-profile-pictures-v0-ao0ke2r604wf1.jpg?width=447&format=pjpg&auto=webp&s=11411497bc415fef5a005bf95274cd57dd7e6abe"
+                        alt=""
+                        width={200}
+                    />
+                </div>
+            </div>
+
+            <ul className="flex h-20 justify-center mt-10 gap-4">
+                <li>
+                    <img
+                        src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    {" "}
+                    <img
+                        src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img
+                        src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img
+                        src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"
+                        alt=""
+                    />
+                </li>
+                <li>
+                    <img
+                        src="https://www.vectorlogo.zone/logos/swift/swift-ar21.svg"
+                        alt=""
+                    />
+                </li>
+            </ul>
+            <div>
+                <div className="ContactPage grid grid-cols-2 h-fit p-4 m-10 rounded-2xl">
+                    <ul className="underline font-light flex flex-col gap-5">
+                        <li>
+                            Email @<br />
+                            <a href="mailto:bibekchand843@gmail.com">
+                                <span className="pl-2">&rarr; bibekchand843@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            Github<br />
+                            <a href="https://github.com/bibekchand">
+                                <span className="pl-2">&rarr; github.com/bibekchand</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div className="justify-self-center">
+                        <img
+                            src="https://preview.redd.it/give-me-your-best-anime-profile-pictures-v0-ao0ke2r604wf1.jpg?width=447&format=pjpg&auto=webp&s=11411497bc415fef5a005bf95274cd57dd7e6abe"
+                            alt=""
+                            width={200}
+                        />
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }

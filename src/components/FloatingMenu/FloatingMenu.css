@@ -1,15 +1,20 @@
 hr {
     width:0;
-    height:5px;
+    height:2px;
     background-color:black;
     border-radius:2px;
     transition:0.5s ease-in-out;
 }
 li:hover + hr {
     width:100%;
+    border:2px solid white
 }
-nav{
-    background-color: white;
-    color: black;
+.floatingMenu{
+    background-color: black;
+    color: white;
     transition: 0.2s ease-in-out;
+}
+
+.menuButton {
+    box-shadow: gray 5px 5px
 }

@@ -1,7 +1,9 @@
 @import "tailwindcss";
-#root{
-    font-family: "Bungee", sans-serif;
-    height:100vh;
-    color:white;
-    background-color:black;
+#root {
+	font-family: "Saira Stencil", sans-serif;
+	color: black;
+	background-color: white;
+}
+.ContactPage {
+	box-shadow: rgb(225, 230, 226, 0.5) 0px 0px 2px 2px;
 }
