@@ -26,11 +26,11 @@ export default function NavBar() {
                         <hr />
                     </div>
                     <div>
-                        <li>About</li>
+                        <li> About</li>
                         <hr />
                     </div>
                     <div>
-                        <li>Contact</li>
+                        <li><a href="#ContactPage">Contact</a></li>
                         <hr />
                     </div>
                 </ul>

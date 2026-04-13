@@ -16,7 +16,9 @@ export default function App() {
                 <div>
                     <span className="text-6xl font-bold font-[Bungee]">Bibek Chand</span>
                     <br />
-                    <span className="text-blue-500 text-6xl font-[Bungee]">Developer</span>
+                    <span className="text-blue-500 text-6xl font-[Bungee]">
+                        Developer
+                    </span>
                     <div className="mt-4 font-[Saira_Stencil]">
                         Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
                         <br />
@@ -24,7 +26,7 @@ export default function App() {
                             type="button"
                             className=" font-[Bungee] mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
                         >
-                            Contact Me
+                            <a href="#ContactPage">Contact Me</a>
                         </button>
                     </div>
                 </div>
@@ -71,7 +73,10 @@ export default function App() {
                 </li>
             </ul>
             <div>
-                <div className="ContactPage grid grid-cols-2 h-fit p-4 m-10 rounded-2xl">
+                <div
+                    id="ContactPage"
+                    className="ContactPage grid grid-cols-2 h-fit p-4 m-10 rounded-2xl"
+                >
                     <ul className="underline font-light flex flex-col gap-5">
                         <li>
                             Email @<br />
@@ -80,7 +85,8 @@ export default function App() {
                             </a>
                         </li>
                         <li>
-                            Github<br />
+                            Github
+                            <br />
                             <a href="https://github.com/bibekchand">
                                 <span className="pl-2">&rarr; github.com/bibekchand</span>
                             </a>
