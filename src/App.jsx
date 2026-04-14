@@ -37,18 +37,18 @@ export default function App() {
             </div>
             <div className="flex mt-20 pl-20  items-start w-full flex-wrap overflow-visible">
                 <div className="text-5xl relative left-5 ">👏</div>
-                <div className=" max-w-[20ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-purple-400 border-2">
+                <div className=" max-w-[20ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-purple-400 border-2 menuButton">
                     "This is probably the best code we've written till date."
                 </div>
 
                 <div className="text-5xl relative left-5">🤩</div>
-                <div className="max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-red-400 border-2">
+                <div className="max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-red-400 border-2 menuButton">
                     "Working with Bibek was so much easy. He communicates well and listens
                     to all of the requirements."
                 </div>
 
                 <div className="text-5xl relative left-5">😍</div>
-                <div className="  max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-yellow-400 border-2">
+                <div className="  max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-yellow-400 border-2 menuButton">
                     “Bibek did an excellent job on our project. He paid attention to
                     detail, communicated clearly throughout, and delivered high-quality
                     work within the deadline. Highly recommended.”
