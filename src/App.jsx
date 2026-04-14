@@ -1,3 +1,4 @@
+import Banner from "./assests/Banner.jpeg";
 import NavBar from "./components/FloatingMenu/FloatingMenu.jsx";
 export default function App() {
     return (
@@ -31,48 +32,86 @@ export default function App() {
                     </div>
                 </div>
                 <div className=" justify-self-center">
-                    <img
-                        src="https://preview.redd.it/give-me-your-best-anime-profile-pictures-v0-ao0ke2r604wf1.jpg?width=447&format=pjpg&auto=webp&s=11411497bc415fef5a005bf95274cd57dd7e6abe"
-                        alt=""
-                        width={200}
-                    />
+                    <img src={Banner} alt="" height={300} width={400} />
                 </div>
             </div>
+            <div className="flex mt-20 pl-20  items-start w-full flex-wrap overflow-visible">
+                <div className="text-5xl relative left-5 ">👏</div>
+                <div className=" max-w-[20ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-purple-400 border-2">
+                    "This is probably the best code we've written till date."
+                </div>
 
-            <ul className="flex h-20 justify-center mt-10 gap-4">
-                <li>
-                    <img
-                        src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"
-                        alt=""
-                    />
-                </li>
-                <li>
-                    {" "}
-                    <img
-                        src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg"
-                        alt=""
-                    />
-                </li>
-                <li>
-                    <img
-                        src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"
-                        alt=""
-                    />
-                </li>
-                <li>
-                    <img
-                        src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"
-                        alt=""
-                    />
-                </li>
-                <li>
-                    <img
-                        src="https://www.vectorlogo.zone/logos/swift/swift-ar21.svg"
-                        alt=""
-                    />
-                </li>
-            </ul>
+                <div className="text-5xl relative left-5">🤩</div>
+                <div className="max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-red-400 border-2">
+                    "Working with Bibek was so much easy. He communicates well and listens
+                    to all of the requirements."
+                </div>
+
+                <div className="text-5xl relative left-5">😍</div>
+                <div className="  max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-yellow-400 border-2">
+                    “Bibek did an excellent job on our project. He paid attention to
+                    detail, communicated clearly throughout, and delivered high-quality
+                    work within the deadline. Highly recommended.”
+                </div>
+            </div>
             <div>
+                <div className="flex flex-col ml-auto mr-auto mt-20 text-white justify-center items-center  p-8 text-4xl font-[Bungee] h-fit w-fit bg-purple-400">
+                    About Me
+                </div>
+                <div className="text-center font-[Saira_Stencil] max-w-[65ch] ml-auto mr-auto mt-10">
+                    I have been working as a software developer for more than 6 months
+                    now. I haved developed app for iOS, developed websites for various
+                    companies and individuals and done other fun stuff.
+                </div>
+                <div className="text-center max-w-[65ch] ml-auto mr-auto font-[Bungee] mt-10">
+                    Technologies I have worked with:
+                </div>
+                <ul className="flex h-20 justify-center mt-5 gap-4 flex-wrap">
+                    <li>
+                        <img
+                            src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        {" "}
+                        <img
+                            src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="https://www.vectorlogo.zone/logos/swift/swift-ar21.svg"
+                            alt=""
+                        />
+                    </li>
+                </ul>
+                <div className="text-center">
+                    I use{" "}
+                    <a
+                        href="https://github.com/bibekchand/my_dotfyles"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <span className="text-blue-500 underline">NeoVim</span>
+                    </a>{" "}
+                    btw.😏
+                </div>
+            </div>
+            <div className="mt-20">
                 <div
                     id="ContactPage"
                     className="ContactPage grid grid-cols-2 h-fit p-4 m-10 rounded-2xl"

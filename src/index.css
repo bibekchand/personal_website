@@ -3,7 +3,7 @@
 	color: black;
 	background-color: white;
 }
-.ContactPage {
+.ContactPage, .dialogBox {
 	box-shadow: rgb(225, 230, 226, 0.5) 0px 0px 2px 2px;
 
 	font-family: "Saira Stencil", sans-serif; 
