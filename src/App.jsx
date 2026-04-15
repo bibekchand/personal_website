@@ -31,51 +31,58 @@ export default function App() {
             </nav>
             <div className="grid grid-cols-2 mt-20 pl-20">
                 <div>
-                    <span className="text-6xl font-bold font-[Bungee]">Bibek Chand</span>
-                    <br />
-                    <motion.span
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            duration: 0.6,
-                            delay: 0.25,
-                            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
-                        }}
-                        className="text-blue-500 text-6xl font-[Bungee]"
-                    >
-                        Developer
-                    </motion.span>
                     <motion.div
-                        className="mt-4 font-[Saira_Stencil]"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            duration: 0.6,
-                            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
-                        }}
+                        className="text-6xl font-bold font-[Bungee]"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{duration:0.8}}
                     >
-                        Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
-                        <br />
-                        <button
-                            type="button"
-                            className=" font-[Bungee] mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
-                        >
-                            <a href="#ContactPage">Contact Me</a>
-                        </button>
-                    </motion.div>
-                </div>
-                <motion.div
-                    className=" justify-self-center"
-                    initial={{ opacity: 0, scale: 0.95, y: 200 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    Bibek Chand
+                </motion.div>
+                <br />
+                <motion.span
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{
                         duration: 0.6,
-                        scale: { type: "spring", visualDuration: 0.1, bounce: 0.2 },
+                        delay: 0.25,
+                        scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
+                    }}
+                    className="text-blue-500 text-6xl font-[Bungee]"
+                >
+                    Developer
+                </motion.span>
+                <motion.div
+                    className="mt-4 font-[Saira_Stencil]"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.6,
+                        scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
                     }}
                 >
-                    <img src={Banner} alt="" height={300} width={400} />
+                    Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
+                    <br />
+                    <button
+                        type="button"
+                        className=" font-[Bungee] mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
+                    >
+                        <a href="#ContactPage">Contact Me</a>
+                    </button>
                 </motion.div>
             </div>
+            <motion.div
+                className=" justify-self-center"
+                initial={{ opacity: 0, scale: 0.95, y: 200 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{
+                    duration: 0.6,
+                    scale: { type: "spring", visualDuration: 0.1, bounce: 0.2 },
+                }}
+            >
+                <img src={Banner} alt="" height={300} width={400} />
+            </motion.div>
+        </div >
 
             <div className="flex flex-col ml-auto mr-auto mt-30 text-white justify-center items-center  p-8 text-4xl font-[Bungee] h-fit w-fit bg-orange-400">
                 Reviews
