@@ -1,6 +1,22 @@
 import Banner from "./assests/Banner.jpeg";
 import NavBar from "./components/FloatingMenu/FloatingMenu.jsx";
+import { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 export default function App() {
+    const ref = useRef(null);
+    const secondRef = useRef(null);
+    const isInView = useInView(ref, { once: true });
+    const isInViewSecond = useInView(secondRef, { once: true });
+    const mainControls = useAnimation();
+    const mainControlsSecond = useAnimation();
+    useEffect(() => {
+        if (isInView) {
+            mainControls.start("visible");
+        }
+        if (isInViewSecond) {
+            mainControlsSecond.start("visible");
+        }
+    }, [isInView, isInViewSecond, mainControls, mainControlsSecond]);
     return (
         <>
             <nav className="flex justify-between pl-20 pt-5 pr-20">
@@ -17,10 +33,27 @@ export default function App() {
                 <div>
                     <span className="text-6xl font-bold font-[Bungee]">Bibek Chand</span>
                     <br />
-                    <span className="text-blue-500 text-6xl font-[Bungee]">
+                    <motion.span
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 0.6,
+                            delay: 0.25,
+                            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
+                        }}
+                        className="text-blue-500 text-6xl font-[Bungee]"
+                    >
                         Developer
-                    </span>
-                    <div className="mt-4 font-[Saira_Stencil]">
+                    </motion.span>
+                    <motion.div
+                        className="mt-4 font-[Saira_Stencil]"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 0.6,
+                            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
+                        }}
+                    >
                         Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
                         <br />
                         <button
@@ -29,13 +62,38 @@ export default function App() {
                         >
                             <a href="#ContactPage">Contact Me</a>
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className=" justify-self-center">
+                <motion.div
+                    className=" justify-self-center"
+                    initial={{ opacity: 0, scale: 0.95, y: 200 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{
+                        duration: 0.6,
+                        scale: { type: "spring", visualDuration: 0.1, bounce: 0.2 },
+                    }}
+                >
                     <img src={Banner} alt="" height={300} width={400} />
-                </div>
+                </motion.div>
             </div>
-            <div className="flex mt-20 pl-20  items-start w-full flex-wrap overflow-visible">
+
+            <div className="flex flex-col ml-auto mr-auto mt-30 text-white justify-center items-center  p-8 text-4xl font-[Bungee] h-fit w-fit bg-orange-400">
+                Reviews
+            </div>
+            <motion.div
+                className="flex mt-20 pl-20  items-start w-full flex-wrap overflow-visible"
+                ref={secondRef}
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControlsSecond}
+                transition={{
+                    duration: 0.6,
+                    delay: 0.25,
+                }}
+            >
                 <div className="text-5xl relative left-5 ">👏</div>
                 <div className=" max-w-[20ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-purple-400 border-2 menuButton">
                     "This is probably the best code we've written till date."
@@ -53,8 +111,8 @@ export default function App() {
                     detail, communicated clearly throughout, and delivered high-quality
                     work within the deadline. Highly recommended.”
                 </div>
-            </div>
-            <div>
+            </motion.div>
+            <div className="autoShow">
                 <div className="flex flex-col ml-auto mr-auto mt-20 text-white justify-center items-center  p-8 text-4xl font-[Bungee] h-fit w-fit bg-purple-400">
                     About Me
                 </div>
@@ -66,7 +124,20 @@ export default function App() {
                 <div className="text-center max-w-[65ch] ml-auto mr-auto font-[Bungee] mt-10">
                     Technologies I have worked with:
                 </div>
-                <ul className="flex h-20 justify-center mt-5 gap-4 flex-wrap">
+                <motion.ul
+                    ref={ref}
+                    variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{
+                        duration: 0.6,
+                        delay: 0.25,
+                    }}
+                    className="flex h-20 justify-center mt-5 gap-4 flex-wrap"
+                >
                     <li>
                         <img
                             src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"
@@ -98,7 +169,7 @@ export default function App() {
                             alt=""
                         />
                     </li>
-                </ul>
+                </motion.ul>
                 <div className="text-center">
                     I use{" "}
                     <a
