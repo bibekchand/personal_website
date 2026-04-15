@@ -112,7 +112,18 @@ export default function App() {
                     work within the deadline. Highly recommended.”
                 </div>
             </motion.div>
-            <div className="autoShow">
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 75 },
+                    visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{
+                    duration: 0.6,
+                    delay: 0.25,
+                }}
+            >
                 <div className="flex flex-col ml-auto mr-auto mt-20 text-white justify-center items-center  p-8 text-4xl font-[Bungee] h-fit w-fit bg-purple-400">
                     About Me
                 </div>
@@ -181,7 +192,7 @@ export default function App() {
                     </a>{" "}
                     btw.😏
                 </div>
-            </div>
+            </motion.div>
             <div className="mt-20">
                 <div
                     id="ContactPage"
