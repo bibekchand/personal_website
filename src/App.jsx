@@ -35,54 +35,57 @@ export default function App() {
                         className="text-6xl font-bold font-[Bungee]"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{duration:0.8}}
+                        transition={{ duration: 0.8 }}
                     >
-                    Bibek Chand
-                </motion.div>
-                <br />
-                <motion.span
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                        duration: 0.6,
-                        delay: 0.25,
-                        scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
-                    }}
-                    className="text-blue-500 text-6xl font-[Bungee]"
-                >
-                    Developer
-                </motion.span>
-                <motion.div
-                    className="mt-4 font-[Saira_Stencil]"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                        duration: 0.6,
-                        scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
-                    }}
-                >
-                    Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
+                        Bibek Chand
+                    </motion.div>
                     <br />
-                    <button
-                        type="button"
-                        className=" font-[Bungee] mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
+                    <motion.span
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 0.6,
+                            delay: 0.25,
+                            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
+                        }}
+                        className="text-blue-500 text-6xl font-[Bungee]"
                     >
-                        <a href="#ContactPage">Contact Me</a>
-                    </button>
+                        Developer
+                    </motion.span>
+                    <motion.div
+                        className="mt-4 font-[Saira_Stencil]"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 0.6,
+                            scale: { type: "spring", visualDuration: 0.6, bounce: 0.5 },
+                        }}
+                    >
+                        Hi, I am Bibek, I am a developer and a <br /> tech enthusiast.
+                        <br />
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.8 }}
+                            transition={{ type: "spring", duration: 0.2, stiffness: 1000 }}
+                            type="button"
+                            className=" font-[Bungee] mt-5 text-blue-500 z-10 pl-4 pr-4 pt-2 pb-2 cursor-pointer border-3 border-red-400  rounded-4xl h-fit w-fit menuButton"
+                        >
+                            <a href="#ContactPage">Contact Me</a>
+                        </motion.button>
+                    </motion.div>
+                </div>
+                <motion.div
+                    className=" justify-self-center"
+                    initial={{ opacity: 0, scale: 0.95, y: 200 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{
+                        duration: 0.6,
+                        scale: { type: "spring", visualDuration: 0.1, bounce: 0.2 },
+                    }}
+                >
+                    <img src={Banner} alt="" height={300} width={400} />
                 </motion.div>
             </div>
-            <motion.div
-                className=" justify-self-center"
-                initial={{ opacity: 0, scale: 0.95, y: 200 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{
-                    duration: 0.6,
-                    scale: { type: "spring", visualDuration: 0.1, bounce: 0.2 },
-                }}
-            >
-                <img src={Banner} alt="" height={300} width={400} />
-            </motion.div>
-        </div >
 
             <div className="flex flex-col ml-auto mr-auto mt-30 text-white justify-center items-center  p-8 text-4xl font-[Bungee] h-fit w-fit bg-orange-400">
                 Reviews
@@ -101,18 +104,36 @@ export default function App() {
                     delay: 0.25,
                 }}
             >
-                <div className="text-5xl relative left-5 ">👏</div>
-                <div className=" max-w-[20ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-purple-400 border-2 menuButton">
+                <motion.div
+                    drag
+                    dragConstraints={{ left: -20 }}
+                    className="text-5xl relative left-5 "
+                >
+                    👏
+                </motion.div>
+                <div className="  max-w-[20ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-purple-400 border-2 menuButton">
                     "This is probably the best code we've written till date."
                 </div>
 
-                <div className="text-5xl relative left-5">🤩</div>
+                <motion.div
+                    drag
+                    dragConstraints={{ left: -20 }}
+                    className="text-5xl relative left-5"
+                >
+                    🤩
+                </motion.div>
                 <div className="max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-red-400 border-2 menuButton">
                     "Working with Bibek was so much easy. He communicates well and listens
                     to all of the requirements."
                 </div>
 
-                <div className="text-5xl relative left-5">😍</div>
+                <motion.div
+                    drag
+                    dragConstraints={{ left: -20 }}
+                    className="text-5xl relative left-5"
+                >
+                    😍
+                </motion.div>
                 <div className="  max-w-[30ch] p-10 dialogBox mr-20 rounded-full rounded-tl-2xl border-yellow-400 border-2 menuButton">
                     “Bibek did an excellent job on our project. He paid attention to
                     detail, communicated clearly throughout, and delivered high-quality
